@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Food Categories Controls</title>
+        <link rel="stylesheet" href="scripts/css/style.css">
+    </head>
+    <body class="hero" style="background-position: bottom;">
+        <a href="admin_menu.html" style="float: right;">Back</a>
+        <div class="side-navigation">
+            <img src="assets/logo_nopadding.png" alt="logo" style="width: 120px; height: 130px; align-self: center;">
+            <a href="categories_control.html">Add</a>
+            <a class="active" href="find_categories.html">Find</a>
+            <a href="edit_categories.html">Edit</a>
+            <a href="delete_categories.html">Delete</a>
+        </div>
+
+        <div class="main">
+            <div class="card">
+                <form>
+                    <h2>Find Food Categories</h2><br>
+                    <p>Search by:</p>
+                    <label for="cid">Food Category ID</label>
+                    <input class="admin-inputs" type="text" name="cid" id="cid">
+                    <label for="category">Food Category Name</label><br>
+                    <input class="admin-inputs" type="text" name="category" id="category">
+                </form>
+                <button class="admin-btn" onclick="appear()">Submit</button>
+            </div>
+
+            <div id="displ" class="card" style="padding: 10x 10px; margin-top: 10px; width: 70%;">
+                <table>
+                    <tr>
+                        <th>Category ID</th>
+                        <th>Food Category Name</th>
+                    </tr>
+                    <tr>
+                        <th>F8732</th>
+                        <th>Dry Food</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <footer class="org-footer">
+            <p style="float: right;">Company Name/Organization Name</p>
+        </footer>
+
+        <script>
+            function appear() {
+                var x = document.getElementById("displ");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+       </script>
+    </body>
+</html>

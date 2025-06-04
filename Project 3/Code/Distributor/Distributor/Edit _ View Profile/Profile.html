@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	  <style>
+		  
+		  #file-chosen{
+  margin-left: 0.3rem;
+  font-family: sans-serif;
+}
+		  
+	  #myFile {
+  background-color: grey;
+  color: white;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+	  
+	  </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+						<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+						<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+	  <img src="images/logo.png" width="200" height="200" >
+
+ 
+    <!--  <a class="navbar-brand" href="#">Navbar</a> !-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+			          <li class="nav-item active"> <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a> </li>
+						          <li class="nav-item active"> <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a> </li>
+			          <li class="nav-item active"> <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a> </li>
+
+
+          <li class="nav-item"> <a class="nav-link" href="#">Home </a> </li>
+ <li class="nav-item dropdown">
+ 
+			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rider</a>  
+			
+			 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="searchLoc.html">Search for nearby foodbank locations</a> <a class="dropdown-item" href="statReFood.html">Check status of reserved food</a> <a class="dropdown-item" href="delStatus.html">Delivery status</a> <a class="dropdown-item" href="Pickup.html">Pick up food</a> <a class="dropdown-item" href="Dropoff.html">Drop off food</a>
+            </div>
+			          </li>			          <li class="nav-item"> <a class="nav-link" href="#">About Us</a> </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Help Us </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a> 
+            </div>
+          </li>
+          <li class="nav-item"> <a class="nav-link disabled" href="#">Disabled</a> </li>
+        </ul>
+        <div class="col-lg-3">
+<a href="Profile.html">
+		              <img class="rounded-circle img-fluid" alt="140x140" style="width: 100px; height: 100px;" src="images/cat.jpg" data-holder-rendered="true"></a>
+
+						          </div>
+      </div>
+    </nav>
+    <header>
+      <div class="jumbotron">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+					  <img src="images/foodcharity.png" width="1125" height="500" >
+
+             </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 mb-4 mt-2 text-center">
+            <h2>RIDER PROFILE</h2>
+          </div>
+        </div>
+      </div>
+      <div class="container ">
+        <div class="row">
+       
+          <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+<p>&nbsp;</p>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+            <img class="rounded-circle img-fluid" alt="140x140" style="width: 140px; height: 140px;" src="images/cat.jpg" data-holder-rendered="true">
+            <h3>Long Kang&nbsp;</h3>
+          </div>
+        </div>
+        <div class="row">
+
+			</div>
+		  
+        <div class="col-lg-12 col-md-6 col-sm-12 text-center">
+ 
+<!--
+          <button type="updatePhoto" id="changePhoto2" class="btn btn-primary btn-lg"> Change Photo </button>
+			              <p>&nbsp;</p>
+-->
+
+   <input  type="file" id="myFile" name="filename" >
+ 		
+        </div>
+ 
+          <div class="col-sm-12 mt-4 mb-2 text-center">
+            <form id="feedbackForm" class="text-center">
+	   <div class="form-group">
+                    <label for="name">Rider Username</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="LK462" aria-describedby="usernameHelp">
+                    <span id="usernameHelp" class="form-text text-muted" style="display: none;">Please enter your Username.</span>
+          </div>
+	 
+                  <div class="form-group">
+                    <label for="name">First Name</label>
+                    <input type="text" class="form-control" id="fname" name="fname" placeholder="Long " aria-describedby="FnameHelp">
+                    <span id="FnameHelp" class="form-text text-muted" style="display: none;">Please enter your First name.</span>
+                  </div>
+	 
+	 
+          <div class="form-group">
+                    <label for="name">Last Name</label>
+                    <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Kang" aria-describedby="LnameHelp">
+                    <span id="LnameHelp" class="form-text text-muted" style="display: none;">Please enter your Last name.</span>
+              </div>
+	  
+   <div class="form-group">
+                    <label for="birthday">Birthdate</label>
+			<input type="date" class="form-control" id="birthday" name="birthday">
+                    <span id="birthdateHelp" class="form-text text-muted" style="display: none;">Please enter your Birthdate.</span>
+   			  </div>
+	 
+ 	 
+                  <div class="form-group">
+                    <label for="email">Nationality</label>
+                    <input type="email" class="form-control" id="nationality" name="nationality" placeholder="Malaysian" aria-describedby="nationalityHelp">
+                    <span id="nationalityHelp" class="form-text text-muted" style="display: none;">Please enter a valid Nationality.</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email">Password</label>
+                    <input type="email" class="form-control" id="password" name="password" placeholder="******" aria-describedby="passwordHelp">
+                    <span id="passwordHelp" class="form-text text-muted" style="display: none;">Please enter a valid Password.</span>
+                  </div>
+	 
+                  <div class="form-group">
+                    <label for="email">E-Mail</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="LongKang@gmail.com" aria-describedby="emailHelp">
+                    <span id="emailHelp" class="form-text text-muted" style="display: none;">Please enter a valid e-mail address.</span>
+                  </div>
+	 
+	 
+	 
+                  <div class="form-group">
+                    <label for="email">Mobile Number</label>
+                    <input type="email" class="form-control" id="mobileNum" name="mobileNum" placeholder="+60195557417" aria-describedby="mobileNumHelp">
+                    <span id="mobileNumHelp" class="form-text text-muted" style="display: none;">Please enter a valid Mobile Number.</span>
+                  </div>
+	 
+	 
+	 
+          <div class="form-group">
+                    <label for="message">Address</label>
+                    <textarea rows="3" cols="50" class="form-control" id="address" name="address" placeholder="No.67, Jalan Bunga Mewah, 56100 Ampang, Selangor" aria-describedby="addressHelp"></textarea>
+                    <span id="addressHelp" class="form-text text-muted" style="display: none;">Please enter a Address.</span>
+              </div>
+                  <button type="submit" id="feedbackSubmit" class="btn btn-primary btn-lg"> Update</button>
+        </form>          </div>
+		            </div>
+	  </section>
+      
+    <hr>
+    <div class="container text-white bg-dark p-4">
+      <div class="row">
+ 
+        </div>
+        <div class="col-md-4 col-lg-5 col-6 col-xl-12" align="center">
+          <address>
+            <strong>MyFood</strong><br>
+            Jalan Washinton Temeloh<br>
+            49000 Johor, Malaysia.<br>
+             +603 2456-7890
+          </address>
+          <address>
+             <a href="mailto:#">MY.Food@gmail.com</a>
+          </address>
+        </div>
+    </div>
+    <footer class="text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Copyright © MyFood. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+ 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script src="js/jquery-3.4.1.min.js"></script> 
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="js/popper.min.js"></script> 
+    <script src="js/bootstrap-4.4.1.js"></script>
+	  
+	 
+  </body>
+</html>

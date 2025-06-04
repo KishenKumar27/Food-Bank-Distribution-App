@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Food Report Controls</title>
+        <link rel="stylesheet" href="scripts/css/style.css">
+    </head>
+    <body class="hero" style="background-position: bottom;">
+        <a href="admin_menu.html" style="float: right;">Back</a>
+        <div class="side-navigation">
+            <img src="assets/logo_nopadding.png" alt="logo" style="width: 120px; height: 130px; align-self: center;">
+            <a href="report_control.html">Add</a>
+            <a href="find_report.html">Find</a>
+            <a class="active" href="edit_report.html">Edit</a>
+            <a href="delete_report.html">Delete</a>
+        </div>
+
+        <div class="main">
+            <div class="card">
+                <form>
+                    <h2>Edit Food Bank Report</h2><br>
+                    <p>Search by:</p>
+                    <label for="reportid">Report ID</label>
+                    <input class="admin-inputs" type="text" name="reportid" id="reportid">
+                    <br><br>
+                    <p>Change (Leave empty if no change is needed):</p>
+                    <label for="category">Food Category</label><br>
+                    <select name="category" id="category">
+                        <option value="spices">Spices</option>
+                        <option value="canned">Canned Food</option>
+                        <option value="produce">Fresh Produce</option>
+                    </select>
+                    <br><br>
+                    <label for="dlloc">Distribution Location</label><br>
+                    <select name="dlloc" id="dlloc">
+                        <option value="null">---</option>
+                        <option value="klang">Klang valley</option>
+                        <option value="putrajaya">Putrajaya</option>
+                    </select>
+                    <br><br>
+                    <label for="qty">Quantity</label>
+                    <input class="admin-inputs" type="number" name="qty" id="qty" min="1">
+                </form>
+                <button class="admin-btn" onclick="appear()">Submit</button>
+            </div>
+            <div id="displ" class="card" style="padding: 10x 10px; margin-top: 10px; width: 70%;">
+                <h2>Change info for Report <strong>R2783</strong></h2>
+                <table>
+                    <tr>
+                        <th>Report ID</th>
+                        <th>Food Category</th>
+                        <th>Distribution Location</th>
+                        <th>Quantity</th>
+                    </tr>
+                    <tr>
+                        <th>R2783</th>
+                        <th>Spices</th>
+                        <th>Putrajaya</th>
+                        <th>40</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <footer class="org-footer">
+            <p style="float: right;">Company Name/Organization Name</p>
+        </footer>
+        <script>
+            function appear() {
+                var x = document.getElementById("displ");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+       </script>
+    </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Food Report Controls</title>
+        <link rel="stylesheet" href="scripts/css/style.css">
+    </head>
+    <body class="hero" style="background-position: bottom;">
+        <a href="admin_menu.html" style="float: right;">Back</a>
+        <div class="side-navigation">
+            <img src="assets/logo_nopadding.png" alt="logo" style="width: 120px; height: 130px; align-self: center;">
+            <a href="report_control.html">Add</a>
+            <a class="active" href="find_report.html">Find</a>
+            <a href="edit_report.html">Edit</a>
+            <a href="delete_report.html">Delete</a>
+        </div>
+
+        <div class="main">
+            <div class="card">
+                <form>
+                    <h2>Find Food Bank Report</h2><br>
+                    <p>Search by:</p>
+                    <label for="reportid">Report ID</label>
+                    <input class="admin-inputs" type="text" name="reportid" id="reportid">
+                    <label for="category">Food Category</label><br>
+                    <select name="category" id="category">
+                        <option value="spices">Spices</option>
+                        <option value="canned">Canned Food</option>
+                        <option value="produce">Fresh Produce</option>
+                    </select>
+                    <br><br>
+                    <label for="dlloc">Distribution Location</label><br>
+                    <select name="dlloc" id="dlloc">
+                        <option value="klang">Klang valley</option>
+                        <option value="putrajaya">Putrajaya</option>
+                    </select>
+                    <br><br>
+                    <label for="qty">Quantity</label>
+                    <input class="admin-inputs" type="number" name="qty" id="qty" min="1"><br><br>
+                    <p>Search Condition</p>
+                    <input type="radio" name="condition" id="OR" value="OR">
+                    <label for="OR">OR</label><br>
+                    <input type="radio" name="condition" id="AND" value="AND">
+                    <label for="AND">AND</label><br>
+                </form>
+                <button class="admin-btn" onclick="appear()">Submit</button>
+            </div>
+            
+            <div id="displ" class="card" style="padding: 10x 10px; margin-top: 10px; width: 70%;">
+                <table>
+                    <tr>
+                        <th>Report ID</th>
+                        <th>Food Category</th>
+                        <th>Distribution Location</th>
+                        <th>Quantity</th>
+                    </tr>
+                    <tr>
+                        <th>R5723</th>
+                        <th>Canned Food</th>
+                        <th>Klang Valley</th>
+                        <th>34</th>
+                    </tr>
+                    <tr>
+                        <th>R4626</th>
+                        <th>Canned Food</th>
+                        <th>Klang Valley</th>
+                        <th>41</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <footer class="org-footer">
+            <p style="float: right;">Company Name/Organization Name</p>
+        </footer>
+
+        <script>
+            function appear() {
+                var x = document.getElementById("displ");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+       </script>
+    </body>
+</html>

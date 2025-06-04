@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	   
+	  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Portfolio Page Template</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	  
+	  <style>
+ 
+*, *:before, *:after {
+	box-sizing:border-box;
+}
+
+body {
+	padding:$base-spacing-unit;
+	font-family:'Source Sans Pro', sans-serif;
+	margin:0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin:0;
+}
+
+
+
+.table {
+	width:100%;
+	border:1px solid $color-form-highlight;
+}
+
+.table-header {
+	display:flex;
+	width:100%;
+	background:#000;
+	padding:($half-spacing-unit * 1.5) 0;
+}
+
+.table-row {
+	display:flex;
+	width:100%;
+	padding:($half-spacing-unit * 1.5) 0;
+	
+	&:nth-of-type(odd) {
+		background:$color-form-highlight;
+	}
+}
+
+.table-data, .header__item {
+	flex: 1 1 20%;
+	text-align:center;
+}
+
+.header__item {
+	text-transform:uppercase;
+}
+
+.filter__link {
+	color:white;
+	text-decoration: none;
+	position:relative;
+	display:inline-block;
+	padding-left:$base-spacing-unit;
+	padding-right:$base-spacing-unit;
+	
+	&::after {
+		content:'';
+		position:absolute;
+		right:-($half-spacing-unit * 1.5);
+		color:white;
+		font-size:$half-spacing-unit;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+/*
+	&.desc::after {
+		content: '(desc)';
+	}
+
+	&.asc::after {
+		content: '(asc)';
+	}
+*/
+	
+}
+	  </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+						<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+						<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+
+	  <img src="images/logo.png" width="200" height="200" >
+
+ 
+    <!--  <a class="navbar-brand" href="#">Navbar</a> !-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+			          <li class="nav-item active"> <a class="nav-link" href="#"> <span class="sr-only"></span></a> </li>
+						          <li class="nav-item active"> <a class="nav-link" href="#"> <span class="sr-only"></span></a> </li>
+			          <li class="nav-item active"> <a class="nav-link" href="#"> <span class="sr-only"></span></a> </li>
+
+
+          <li class="nav-item"> <a class="nav-link" href="#">Home </a> </li>
+ 			            <li class="nav-item dropdown">
+ 
+			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rider</a>  
+			
+			 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="searchLoc.html">Search for nearby foodbank locations</a> <a class="dropdown-item" href="statReFood.html">Check status of reserved food</a> <a class="dropdown-item" href="delStatus.html">Delivery status</a> <a class="dropdown-item" href="Pickup.html">Pick up food</a> <a class="dropdown-item" href="Dropoff.html">Drop off food</a>
+            </div>
+			          </li>
+
+			          <li class="nav-item"> <a class="nav-link" href="location.html">Find</a> </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Help Us </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a> 
+            </div>
+          </li>
+          <li class="nav-item"> <a class="nav-link disabled" href="#">Disabled</a> </li>
+        </ul>
+<!--       INPUT PROFILE HERE-->
+		            <div class="col-lg-3">
+<a href="Profile.html">
+		              <img class="rounded-circle img-fluid" alt="140x140" style="width: 100px; height: 100px;" src="images/cat.jpg" data-holder-rendered="true"></a>
+
+						          </div>
+
+
+      </div>
+    </nav>
+    <section>
+      <div class="jumbotron text-center mt-2">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <img src="images/banner1.png" width="1120" height="260">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1>Drop off food</h1>
+			  <br>
+             
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section>
+      
+        <div class="container">
+        
+            <div class="table">
+                <div class="table-header">
+                    <div class="header__item"><a id="name" class="filter__link" href="#">Food Name</a></div>
+                    <div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Quantity</a></div>
+
+        <!--
+                    <div class="header__item"><a id="losses" class="filter__link filter__link--number" href="#">Losses</a></div>
+                    <div class="header__item"><a id="total" class="filter__link filter__link--number" href="#">Total</a></div>
+        -->
+                </div>
+                <div class="table-content">	
+                    <div class="table-row">		
+                        <div class="table-data">Canned Vegetable</div>
+                        <div class="table-data">2</div>
+        <!--
+                        <div class="table-data">1</div>
+                        <div class="table-data">5</div>
+        -->
+                    </div>
+                    <div class="table-row">
+                        <div class="table-data">Rice</div>
+                        <div class="table-data">1</div>
+        <!--
+                        <div class="table-data">2</div>
+                        <div class="table-data">3</div>
+        -->
+                    </div>
+                    <div class="table-row">
+                        <div class="table-data">Oil</div>
+                        <div class="table-data">1</div>
+
+			</div>
+				  <p>&nbsp;</p>	  <p>&nbsp;</p>	<p>&nbsp;</p>	<p>&nbsp;</p>	<p>&nbsp;</p>	<p>&nbsp;</p>	
+
+                  <div class="center">
+                  <!--  <button class="but but1">Drop Off</button> -->
+                <button onclick="alert('Delivery Successful')">Drop Off</button> 
+                </div>
+                  
+
+
+		</div>	
+	</div>    
+      </div>
+    </section>
+    <hr>
+     <section>
+		  <hr>
+	  
+	  
+	  
+	  
+    <div class="container text-white bg-dark p-4">
+      <div class="row">
+		  
+        <div class="col-6 col-md-8 col-lg-7">
+          <div class="row text-center">
+
+
+		         </div>
+        </div>
+        <div class="col-md-4 col-lg-5 col-6 col-xl-12" align="center">
+          <address>
+            <strong>MyFood</strong><br>
+            Jalan Washinton Temeloh<br>
+            49000 Johor, Malaysia.<br>
+         +603 2456-7890
+          </address>
+          <address>
+             <a href="mailto:#">MY.Food@gmail.com</a>
+          </address>
+        </div>
+    </div>
+    </div>
+    <footer class="text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Copyright © MyFood. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+  </body>
+</html>

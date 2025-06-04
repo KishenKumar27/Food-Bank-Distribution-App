@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Distribution Location Controls</title>
+        <link rel="stylesheet" href="scripts/css/style.css">
+    </head>
+    <body class="hero" style="background-position: bottom;">
+        <a href="admin_menu.html" style="float: right;">Back</a>
+        <div class="side-navigation">
+            <img src="assets/logo_nopadding.png" alt="logo" style="width: 120px; height: 130px; align-self: center;">
+            <a href="distloc_control.html">Add</a>
+            <a class="active" href="find_distloc.html">Find</a>
+            <a href="edit_distloc.html">Edit</a>
+            <a href="delete_distloc.html">Delete</a>
+        </div>
+
+        <div class="main">
+            <div class="card">
+                <form>
+                    <h2>Find Distribution Location</h2><br>
+                    <p>Search by:</p>
+                    <label for="dlid">Disitribution Location ID</label>
+                    <input class="admin-inputs" type="text" name="dlid" id="dlid">
+                    <label for="dlname">Distribution Location Name</label>
+                    <input class="admin-inputs" type="text" id="dlname" name="dlname">
+                    <p>Operating Hours</p>
+                    <label for="starthours">Start</label>
+                    <input type="time" name="starthours" id="starthours">
+                    <label for="endhours">- End</label>
+                    <input type="time" name="endhours" id="endhours"><br><br>
+                    <label for="addr">Address</label>
+                    <textarea class="admin-inputs" name="addr" id="addr" cols="30" rows="3"></textarea><br><br>
+                    <p>Search Condition</p>
+                    <input type="radio" name="condition" id="OR" value="OR">
+                    <label for="OR">OR</label><br>
+                    <input type="radio" name="condition" id="AND" value="AND">
+                    <label for="AND">AND</label><br>
+                </form>
+                <button class="admin-btn" onclick="appear()">Submit</button>
+            </div>
+
+            <div id="displ" class="card" style="padding: 10x 10px; margin-top: 10px; width: 70%;">
+                <table>
+                    <tr>
+                        <th>Distribution Location ID</th>
+                        <th>Distribution Location Name</th>
+                        <th>Start Hours</th>
+                        <th>End Hours</th>
+                        <th>Operating Hours (Hours)</th>
+                        <th>Address</th>
+                    </tr>
+                    <tr>
+                        <th>L8346</th>
+                        <th>Klang</th>
+                        <th>8:00 AM</th>
+                        <th>8:00 PM</th>
+                        <th>12</th>
+                        <th>Klang, Malaysia</th>
+                    </tr>
+                    <tr>
+                        <th>L2875</th>
+                        <th>Kota Bharu</th>
+                        <th>8:00 AM</th>
+                        <th>8:00 PM</th>
+                        <th>12</th>
+                        <th>Kota Bharu, Malaysia</th>
+                    </tr>
+                    <tr>
+                        <th>L7621</th>
+                        <th>Kuala Lumpur</th>
+                        <th>9:00 AM</th>
+                        <th>9:00 PM</th>
+                        <th>12</th>
+                        <th>Kuala Lumpur, Malaysia</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <footer class="org-footer">
+            <p style="float: right;">Company Name/Organization Name</p>
+        </footer>
+
+        <script>
+            function appear() {
+                var x = document.getElementById("displ");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+       </script>
+    </body>
+</html>

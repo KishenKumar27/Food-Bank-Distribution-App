@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Distribution Location Controls</title>
+        <link rel="stylesheet" href="scripts/css/style.css">
+    </head>
+    <body class="hero" style="background-position: bottom;">
+        <a href="admin_menu.html" style="float: right;">Back</a>
+        <div class="side-navigation">
+            <img src="assets/logo_nopadding.png" alt="logo" style="width: 120px; height: 130px; align-self: center;">
+            <a href="distloc_control.html">Add</a>
+            <a href="find_distloc.html">Find</a>
+            <a class="active" href="edit_distloc.html">Edit</a>
+            <a href="delete_distloc.html">Delete</a>
+        </div>
+
+        <div class="main">
+            <div class="card">
+                <form>
+                    <h2>Edit Distribution Location</h2><br>
+                    <p>Search by:</p>
+                    <label for="dlid">Disitribution Location ID</label>
+                    <input class="admin-inputs" type="text" name="dlid" id="dlid"><br><br>
+    
+                    <p>Change (Leave empty if no change is needed):</p>
+                    <label for="dlname">Distribution Location Name</label>
+                    <input class="admin-inputs" type="text" id="dlname" name="dlname">
+                    <p>Operating Hours</p>
+                    <label for="starthours">Start</label>
+                    <input type="time" name="starthours" id="starthours">
+                    <label for="endhours">- End</label>
+                    <input type="time" name="endhours" id="endhours"><br><br>
+                    <label for="addr">Address</label>
+                    <textarea class="admin-inputs" name="addr" id="addr" cols="30" rows="3"></textarea>
+                </form>
+                <button class="admin-btn" onclick="appear()">Submit</button>
+            </div>
+
+            <div id="displ" class="card" style="padding: 10x 10px; margin-top: 10px; width: 70%;">
+                <h2>Change info for Distribution Location <strong>L3275</strong></h2>
+                <table>
+                    <tr>
+                        <th>Distribution Location ID</th>
+                        <th>Distribution Location Name</th>
+                        <th>Start Hours</th>
+                        <th>End Hours</th>
+                        <th>Operating Hours (Hours)</th>
+                        <th>Address</th>
+                    </tr>
+                    <tr>
+                        <th>L3275</th>
+                        <th>Kuching</th>
+                        <th>8:00 AM</th>
+                        <th>9:00 PM</th>
+                        <th>13</th>
+                        <th>Kuching, Malaysia</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <footer class="org-footer">
+            <p style="float: right;">Company Name/Organization Name</p>
+        </footer>
+
+        <script>
+            function appear() {
+                var x = document.getElementById("displ");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+       </script>
+    </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Food Bank</title>
+        <link rel="stylesheet" href="scripts/css/style.css">
+    </head>
+    <body class="hero" style="background-position: bottom;">
+        <p><a href="index.html" style="text-align: right;">Register | Log In</a></p>
+        <ul class="home-menu">
+            <li class="menu-item"><img src="assets/logo_nopadding.png" alt="logo" style="width: 48px; height: 50px; padding: 10px 10px;"></li>
+            <li class="menu-item"><a href="help.html">Get Help</a></li>
+            <li class="menu-item"><a href="location.html">Location</a></li>
+            <li class="menu-item"><a href="about.html">About Us</a></li>
+            <li class="menu-item"><a href="help.html">Support Us</a></li>
+            <li class="menu-item-donate"><a href="donate_food.html" >Donate Food</a></li>
+            <li class="menu-item-donate"><a href="donate_money.html" >Donate Money</a></li>
+        </ul>
+        <p style="text-align: center; color: white; background-color: rgb(170, 67, 67); padding: 10px 10px;">Thank you to all who donate</p>
+        <br>
+        <div class="grid-container">
+            <div class="grid-item-stock" style="padding: 20px 20px;">
+                <table>
+                    <tr>
+                        <th>Food Category</th>
+                        <th>Stock(kg)</th>
+                    </tr>
+                    <tr>
+                        <th>Cheese</th>
+                        <th>3</th>
+                    </tr>
+                    <tr>
+                        <th>Sweets</th>
+                        <th>6</th>
+                    </tr>
+                    <tr>
+                        <th>Produce Vegetables</th>
+                        <th>18</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="grid-item-community" style="text-align: center; font-size: 30px;"><a href="community.html">Community</a></div>
+            <div class="grid-item-image" style="padding: 20px 20px;">
+                <div class="slideshow-container">
+                    <div class="slides fade">
+                        <img class="imgSlides" src="assets/burger.png" alt="borger" style="width: 100%;">
+                    </div>
+                    <div class="slides fade">
+                        <img class="imgSlides" src="assets/noodles.jpeg" alt="ramen" style="width: 100%;">
+                    </div>
+                    <div class="slides fade">
+                        <img class="imgSlides" src="assets/salad.jpeg" alt="salad" style="width: 100%;">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+            <div class=grid-item-text style="padding: 20px 20px;">
+                <h2>Lorem Ipsum</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                    incididunt ut labore et dolore magna aliqua. Tincidunt nunc pulvinar sapien et. 
+                    Imperdiet proin fermentum leo vel orci porta non pulvinar. Dui nunc mattis enim ut. 
+                    Scelerisque eu ultrices vitae auctor eu augue ut lectus. Lacus sed turpis tincidunt 
+                    id aliquet. Ut tortor pretium viverra suspendisse potenti nullam. Malesuada fames ac 
+                    turpis egestas maecenas pharetra convallis. Nibh ipsum consequat nisl vel pretium lectus 
+                    quam id. Mauris a diam maecenas sed enim ut sem viverra aliquet. Cum sociis 
+                    natoque penatibus et magnis dis parturient montes.
+                </p>
+            </div>
+        </div>
+
+        <footer class="org-footer">
+            <p style="float: right;">Company Name/ Organization Name</p>
+        </footer>
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("slides");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                slides[slideIndex-1].style.display = "block";  
+            }
+        </script>
+    </body>
+</html>

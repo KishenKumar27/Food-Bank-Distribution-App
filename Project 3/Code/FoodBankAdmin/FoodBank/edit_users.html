@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>User Controls</title>
+        <link rel="stylesheet" href="scripts/css/style.css">
+    </head>
+    <body class="hero" style="background-position: bottom;">
+        <a href="admin_menu.html" style="float: right;">Back</a>
+        <div class="side-navigation">
+            <img src="assets/logo_nopadding.png" alt="logo" style="width: 120px; height: 130px; align-self: center;">
+            <a href="users_control.html">Add</a>
+            <a href="find_users.html">Find</a>
+            <a class="active" href="edit_users.html">Edit</a>
+            <a href="delete_users.html">Delete</a>
+        </div>
+
+        <div class="main">
+            <div class="card">
+                <form>
+                    <h2>Edit Users</h2><br>
+                    <p>Search by:</p>
+                    <label for="userid">User ID</label>
+                    <input class="admin-inputs" type="text" name="userid" id="userid"><br><br>
+    
+                    <p>Change (Leave empty if no change is needed):</p>
+                    <label for="fname">First Name</label>
+                    <input class="admin-inputs" type="text" id="fname" name="fname">
+                    <label for="lname">Last Name</label>
+                    <input class="admin-inputs" type="text" id="lname" name="lname">
+                    <label for="phonenum">Phone Number</label>
+                    <input class="admin-inputs" type="text" id="phonenum" name="phonenum">
+                    <label for="passwd">Password</label>
+                    <input class="admin-inputs" type="password" >
+                    <label for="email">E-Mail</label>
+                    <input class="admin-inputs" type="email" name="email" id="email">
+                    <label for="addr">Address</label>
+                    <textarea class="admin-inputs" name="addr" id="addr" cols="30" rows="3"></textarea>
+                    <p>Gender</p>
+                    <input type="radio" name="gender" id="male" value="m">
+                    <label for="male">Male</label><br>
+                    <input type="radio" name="gender" id="female" value="f">
+                    <label for="female">Female</label><br>
+                </form>
+                <button class="admin-btn" onclick="appear()">Submit</button>
+            </div>
+
+            <div id="displ" class="card" style="padding: 10x 10px; margin-top: 10px; width: 70%;">
+                <h2>Change info for user <strong>4737</strong></h2>
+                <table>
+                    <tr>
+                        <th>User ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Phone Number</th>
+                        <th>E-Mail</th>
+                        <th>Address</th>
+                        <th>Password</th>
+                        <th>Gender</th>
+                    </tr>
+                    <tr>
+                        <th>4737</th>
+                        <th>Muhd</th>
+                        <th>Ali</th>
+                        <th>012483464</th>
+                        <th>ali18362@gmail.com</th>
+                        <th>12 Jalan Abu, Selangor, Malaysia</th>
+                        <th>aaa388dsa</th>
+                        <th>Male</th>
+                    </tr>
+                </table>
+            </div>
+            
+        </div>
+
+        <footer class="org-footer">
+            <p style="float: right;">Company Name/Organization Name</p>
+        </footer>
+
+        <script>
+            function appear() {
+                var x = document.getElementById("displ");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+       </script>
+    </body>
+</html>

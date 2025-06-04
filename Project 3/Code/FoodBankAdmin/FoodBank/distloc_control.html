@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Distribution Location Controls</title>
+        <link rel="stylesheet" href="scripts/css/style.css">
+    </head>
+    <body class="hero" style="background-position: bottom;">
+        <a href="admin_menu.html" style="float: right;">Back</a>
+        <div class="side-navigation">
+            <img src="assets/logo_nopadding.png" alt="logo" style="width: 120px; height: 130px; align-self: center;">
+            <a class="active" href="distloc_control.html">Add</a>
+            <a href="find_distloc.html">Find</a>
+            <a href="edit_distloc.html">Edit</a>
+            <a href="delete_distloc.html">Delete</a>
+        </div>
+
+        <div class="main">
+            <form class="card" id="form">
+                <h2>Add Distribution Location</h2><br>
+                <label for="dlname">Distribution Location Name</label>
+                <input class="admin-inputs" type="text" id="dlname" name="dlname">
+                <p>Operating Hours</p>
+                <label for="starthours">Start</label>
+                <input type="time" name="starthours" id="starthours">
+                <label for="endhours">- End</label>
+                <input type="time" name="endhours" id="endhours"><br><br>
+                <label for="addr">Address</label>
+                <textarea class="admin-inputs" name="addr" id="addr" cols="30" rows="3"></textarea>
+                <input class="admin-btn" type="submit" value="Submit">
+            </form>
+
+            <div id="displ" style="margin-top: 10px;"></div>
+        </div>
+        <footer class="org-footer">
+            <p style="float: right;">Company Name/Organization Name</p>
+        </footer>
+
+        <script>
+            var form = document.getElementById("form");
+
+            function handleForm(event) {
+                var disp = document.createElement("p");
+
+                disp.classList.add("card");
+                disp.innerHTML = "Inserted Distribution Location<br>Location ID: L3798<br>" + 
+                                 "Distribution Location Name: Putrajaya<br>" + 
+                                 "Operating Hours: 9:00 AM - 9:00 PM (12 Hours)<br>" +
+                                 "Address: 12 Presint 15, Putrajaya, Malaysia<br>";
+    
+                document.getElementById("displ").appendChild(disp);
+                event.preventDefault();
+            }        
+            form.addEventListener('submit', handleForm);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Food Categories Controls</title>
+        <link rel="stylesheet" href="scripts/css/style.css">
+    </head>
+    <body class="hero" style="background-position: bottom;">
+        <a href="admin_menu.html" style="float: right;">Back</a>
+        <div class="side-navigation">
+            <img src="assets/logo_nopadding.png" alt="logo" style="width: 120px; height: 130px; align-self: center;">
+            <a class="active" href="categories_control.html">Add</a>
+            <a href="find_categories.html">Find</a>
+            <a href="edit_categories.html">Edit</a>
+            <a href="delete_categories.html">Delete</a>
+        </div>
+
+        <div class="main">
+            <form class="card" id="form">
+                <h2>Add Food Categories</h2><br>
+                <label for="category">Food Category Name</label><br>
+                <input class="admin-inputs" type="text" name="category" id="category">
+
+                <input class="admin-btn" type="submit" value="Submit">
+            </form>
+
+            <div id="displ" style="margin-top: 10px;"></div>
+        </div>
+        <footer class="org-footer">
+            <p style="float: right;">Company Name/Organization Name</p>
+        </footer>
+
+        <script>
+            var form = document.getElementById("form");
+
+            function handleForm(event) {
+                var disp = document.createElement("p");
+
+                disp.classList.add("card");
+                disp.innerHTML = "Inserted Food Category<br>Category ID: F8732<br>" + 
+                                 "Food Category Name: Dry Food<br>";
+    
+                document.getElementById("displ").appendChild(disp);
+                event.preventDefault();
+            }        
+            form.addEventListener('submit', handleForm);
+        </script>
+    </body>
+</html>
